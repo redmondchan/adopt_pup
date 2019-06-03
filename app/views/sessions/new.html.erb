@@ -1,0 +1,23 @@
+<div class="login-title">
+  <h1>Log In</h1>
+</login>
+<div class="session-error">
+  <% unless flash[:error].nil? %>
+    <% if flash[:error].class == String %>
+      <%= flash[:error] %>
+    <% else %>
+      <% flash[:error].each do |error| %>
+        <p><%= error %></p>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<div class="login">
+  <%= form_tag "/sessions" do %>
+    <label for="name">Your name</label>
+    <%= text_field_tag :username %>
+    <label fpr="password">Your password</label>
+    <%= text_field_tag :password %>
+    <button class="button2hover">Log In</button>
+  <% end %>
+</div>

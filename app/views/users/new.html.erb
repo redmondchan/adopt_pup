@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+  </head>
+  <body>
+    <main>
+      <div>
+        <div class="user-error">
+          <% unless flash[:error].nil? %>
+            <% if flash[:error].class == String %>
+              <%= flash[:error] %>
+            <% else %>
+              <% flash[:error].each do |error| %>
+                <p><%= error %></p>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="create-user">
+          <h1>Create New Account</h1>
+          <%= form_for @user do |f| %>
+            <p><%= f.label :username %></p>
+            <p><%= f.text_field :username %></p>
+            <p><%= f.label :password %></p>
+            <p><%= f.text_field :username %></p>
+            <p><%= f.label :password_confirmation %></p>
+            <p><%= f.label :password_confirmation %></p>
+            <button class="button2hover">Create Account</button>
+          <% end %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

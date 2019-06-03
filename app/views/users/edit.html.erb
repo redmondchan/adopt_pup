@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div class="user-error">
+    <% unless flash[:error].nil? %>
+      <% if flash[:error].class == String %>
+        <% flash[:error] %>
+      <% else %>
+        <%flash[:error].each do |error| %>
+          <p><%= error %></p>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="edit-user">
+    <h1>Edit User</h1>
+    <%= form_for @user do |f| %>
+    <%f.label :username %>
+    <%f.text_field :username %>
+    <%f.submit %>
+    <% end %>
+  </div>
+</html>

@@ -1,0 +1,20 @@
+<div class="dog-info">
+  <h1><%= @dog.name %></h1>
+<br>
+  <img src="<%=dog.image_url%>" alt="dog" height="200" width="200" class="center-show-image">
+  <p><span="font-weight:bold">Breed:</span> <%=@dog.breed%></p>
+  <p><span="font-weight:bold">Location:</span> <%=@dog.location%></p>
+  <p><span="font-weight:bold">Status:</span> <%=@dog.status%></p>
+  <%= form_tag dogs_path, method: :get do %>
+    <button class="button2hover">Back</button>
+  <%end%>
+
+  <%if @dog.status == Not Adopted"%>
+    <%= form_for @adoption do |f| %>
+      <%= f.hidden_field :user_id, value: @current_user.id %>
+      <%= f.hidden_field :dog_id, value: @dog.id %>
+      <button class="button2hover" onsubmit="return confirm('Are you sure you want to submit?');">Adopt</button>
+    <% end %>
+  <% end %>
+
+</div>

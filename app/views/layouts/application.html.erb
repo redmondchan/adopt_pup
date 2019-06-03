@@ -19,6 +19,13 @@
           <li class="nav-item active">
             <a class="nav-link" href="/" style="color: #282828">Home<span class="sr-only">(current)</span></a>
           </li>
+          <li>
+            <% if logged_in? %>
+              <%= link_to "View Profile", user_path(current_user), method: :get, class: "nav-link", style: "color: #282828" %>
+            <% else %>
+              <a class="nav-link" href="/users/new" style="color: #282828">Create Account</a>
+            <% end %>
+          </li>
           <li class="nav-item">
             <% if logged_in? %>
               <%= link_to "View Profile", user_path(current_user), method: :get, class: "nav-link", style: "color: #282828" %>
@@ -43,6 +50,6 @@
     <div id="footer">
       <p>&copy; Copyright 2019</p>
     </div>
-    
+
   </body>
 </html>

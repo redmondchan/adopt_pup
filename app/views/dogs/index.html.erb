@@ -15,7 +15,7 @@
     <% end %>
   </div>
   <div class="card-container">
-    <% if @dogs.empty> %>
+    <% if @dogs.empty? %>
       <%= "There are currently no dogs by that breed for adoption." %>
     <% else %>
       <% @dogs.each do |dog| %>

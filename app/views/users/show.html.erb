@@ -1,0 +1,23 @@
+<div class="user-info">
+  <p class="user-info">Hi, <%= @user.username %> !</p>
+  <% Adoption.all.each do |adoption| %>
+    <% if @user.id == adoption.user_id %>
+    <p class="user-info">
+      <%= link_to "You adopted: #{adoption.dog.name}", dog_path(adoption.dog_id), method: :get, class: "link_color"%></p>
+    </p>
+    <img src="<%= adoption.dog.image_url %>" alt="dog" height="300" width="300" class="center-show-image">
+    <% end %>
+  <% end %>
+  <br>
+  <%= form_tag "/logout", method: :delete do %>
+    <button class="button2hover">Log Out</button>
+  <% end %>
+  <br>
+  <%= form_tag "/users/#{@user.id}/edit", method: :get do %>
+    <button class="button2hover">Update Account</button>
+  <% end %>
+  <br>
+  <%= form_tag(user_path(@user), method: :delete) do %>
+    <button class="button2hover">Delete Account</button>
+  <% end %>
+</div>

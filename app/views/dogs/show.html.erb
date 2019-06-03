@@ -7,9 +7,9 @@
   <p><span="font-weight:bold">Status:</span> <%=@dog.status%></p>
   <%= form_tag dogs_path, method: :get do %>
     <button class="button2hover">Back</button>
-  <%end%>
+  <% end %>
 
-  <%if @dog.status == "Not Adopted"%>
+  <% if @dog.status == "Not Adopted"%>
     <%= form_for @adoption do |f| %>
       <%= f.hidden_field :user_id, value: @current_user.id %>
       <%= f.hidden_field :dog_id, value: @dog.id %>

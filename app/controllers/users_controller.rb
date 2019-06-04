@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if @user.valid?
       current_user
       logged_in?
-      redirect_to user_path(@user)
+      redirect_to "/sessions/new"
     else
       flash[:error]= @user.errors.full_messages
       render :new
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
   def user_params
     params.require(:user).permit(:username, :password)
   end

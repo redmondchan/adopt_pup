@@ -4,6 +4,15 @@
 @import 'sessions';
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif');
 
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content {
+  padding-bottom: 2.5rem;
+}
+
 .home-text {
   text-align: center;
   color: #282828;
@@ -43,6 +52,9 @@ main{
 
 #footer {
   text-align: center;
-  padding: 10px;
-  font-weight: bold
+  bottom: 0;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  height: 2.5rem;
 }

@@ -8,7 +8,7 @@ Full Ruby on Rails website for dog adoption
 * View and adopt a dog
 * Authenticate user's with sessions
 
-![search by breed](search_adopt_dog.gif)
+![search by breed](search adopt_pup.gif)
 
 # Setup
 Clone this repo, go to the root directory and run ```bundle install``` to install dependencies.

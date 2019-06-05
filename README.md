@@ -10,6 +10,10 @@ Full Ruby on Rails website for dog adoption
 
 ![search by breed](search adopt_pup.gif)
 
+![view and adopt](view and adopt.gif)
+
+![change username](change username adopt_pup.gif)
+
 # Setup
 Clone this repo, go to the root directory and run ```bundle install``` to install dependencies.
 

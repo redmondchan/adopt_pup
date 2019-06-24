@@ -6,19 +6,6 @@ body {
   background-color: #ffb6c1;
 }
 
-.user-info {
-  text-align: center;
-}
-
-.user-info p {
-  text-align: center;
-  margin: 10px;
-  font-weight: bold;
-}
-
-.create-user {
-  text-align: center;
-}
 
 .button2hover {
   background-color: #c1ffb6;
@@ -26,11 +13,10 @@ body {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.user-error {
+.create-user {
   text-align: center;
-  font-weight: bold;
-  color: #FF0000;
 }
+
 
 .edit-user {
   text-align: center;
@@ -39,4 +25,20 @@ body {
 
 .link_color {
   color: red;
+}
+
+.user-error {
+  text-align: center;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.user-info p {
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
 }
